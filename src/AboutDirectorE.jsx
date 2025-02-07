@@ -35,19 +35,19 @@ const AboutDirectorE = () => {
               <div className="w-full md:w-1/4 text-center md:text-left">
                 <h3 className="text-lg font-semibold text-black hidden sm:block">Follow Us</h3>
                 <div className="mt-2 flex flex-row md:flex-col space-x-6 md:space-x-0 justify-center md:justify-start">
-                  <a href="https://www.instagram.com/iamabinash_rout" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
+                  <a href="https://www.instagram.com/iamabinash_rout" target="_blank" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
                     <FaInstagram className="text-2xl" />
                     <span className="hidden md:inline ml-2">Instagram</span>
                   </a>
-                  <a href="https://www.linkedin.com/in/abinash-rout-269376264/" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
+                  <a href="https://www.linkedin.com/in/abinash-rout-269376264/" target="_blank" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
                     <FaLinkedin className="text-2xl" />
                     <span className="hidden md:inline ml-2">LinkedIn</span>
                   </a>
-                  <a href="https://www.imdb.com/name/nm12226141/" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
+                  <a href="https://www.imdb.com/name/nm12226141/" target="_blank" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
                     <FaGoogle className="text-2xl" />
                     <span className="hidden md:inline ml-2">Google</span>
                   </a>
-                  <a href="https://www.facebook.com/directorabinashrout?mibextid=wwXIfr&rdid=iuVHBUIyp2ZvATzK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163P5KMStB%2F%3Fmibextid%3DwwXIfr" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
+                  <a href="https://www.facebook.com/directorabinashrout?mibextid=wwXIfr&rdid=iuVHBUIyp2ZvATzK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163P5KMStB%2F%3Fmibextid%3DwwXIfr" target="_blank" className="flex items-center text-gray-700 hover:text-black transition duration-200 md:mb-4">
                     <FaFacebook className="text-2xl" />
                     <span className="hidden md:inline ml-2">Facebook</span>
                   </a>
