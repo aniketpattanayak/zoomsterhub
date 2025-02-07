@@ -62,21 +62,21 @@ const CompanyUmberalla = () => {
               target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomax TV
+              Zoomaax TV
             </a>
             <a
               href="https://www.zoomaaxnews.com"
               target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomax News
+              Zoomaax News
             </a>
             <a
               href="https://www.zoomaaxstudio.com"
               target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomax Studio
+              Zoomaax Studio
             </a>
             <a
               href="https://www.zoomaar.com"
