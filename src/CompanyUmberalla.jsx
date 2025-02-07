@@ -1,18 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 const CompanyUmberalla = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div
-      className="relative inline-block text-left"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
-      <button className="flex">
-        Company Umberella
+    <div className="relative inline-block text-left w-full" ref={dropdownRef}>
+      {/* Button to Open Dropdown */}
+      <button
+        className="flex items-center w-full"
+        onClick={toggleDropdown}
+        onMouseEnter={() => setIsOpen(true)} // Open on hover
+      >
+        Company Umbrella
         <svg
-          className="ml-2 -mr-1 h-5 w-5 text-white"
+          className={`ml-2 -mr-1 h-5 w-5 text-white transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -28,29 +49,38 @@ const CompanyUmberalla = () => {
         </svg>
       </button>
 
+      {/* Dropdown Menu */}
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div
+          className="absolute sm:left-1/2 sm:-translate-x-1/2 left-0 w-full sm:w-56 z-50 bg-white mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
+          onMouseEnter={() => setIsOpen(true)} // Keep open when hovering inside
+          onMouseLeave={() => setIsOpen(false)} // Close when mouse leaves
+        >
           <div className="py-1">
             <a
-              href="#"
+              href="https://www.zoomaaxtv.com"
+              target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
               Zoomax TV
             </a>
             <a
-              href="#"
+              href="https://www.zoomaaxnews.com"
+              target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
               Zoomax News
             </a>
             <a
-              href="#"
+              href="https://www.zoomaaxstudio.com"
+              target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
               Zoomax Studio
             </a>
             <a
-              href="#"
+              href="https://www.zoomaar.com"
+              target="_blank"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
               Zoomaar

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Card = ({ icon, title, description, buttonText, link }) => {
   const handleButtonClick = () => {
     if (link) {
-      window.open(link,"_blank"); 
+      window.open(link, "_blank");
     }
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+    <div className="bg-white shadow-lg rounded-lg p-6 text-center opacity-0 transform translate-y-10 card">
       <div className="flex justify-center items-center mb-4">
         <img src={icon} alt={title} className="h-20 w-19" />
       </div>
@@ -27,6 +29,30 @@ const Card = ({ icon, title, description, buttonText, link }) => {
 };
 
 const Companyapps = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      ".card",
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   const cardData = [
     {
       icon: "/Zoomaax Tv Logo.jpeg",
@@ -63,7 +89,7 @@ const Companyapps = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white">
+    <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white">
       {cardData.map((card, index) => (
         <Card
           key={index}
