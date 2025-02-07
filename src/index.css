@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./SpaceMono-Regular.woff2') format('woff2'),
+       url('./SpaceMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container for all sentences */
+.text-container {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  width: 100%; /* Ensure it spans the full width */
+  height: 50px; /* Fix the height so other components are not affected */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Typing effect for each sentence */
+.typing-animation {
+  display: block;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000;
+  width: 0;
+  animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  margin-bottom: 10px;
+  animation-iteration-count: infinite; /* Loop animation */
+}
+
+//* Sequential delay for each sentence */
+.text-container .typing-animation:nth-child(1) {
+  animation: typing 4s steps(40) forwards, blink 0.75s step-end infinite;
+  animation-delay: 0s; /* First animation starts immediately */
+}
+
+.text-container .typing-animation:nth-child(2) {
+  animation: typing 4s steps(40) forwards, blink 0.75s step-end infinite;
+  animation-delay: 5s; /* Starts after the first animation finishes */
+}
+
+.text-container .typing-animation:nth-child(3) {
+  animation: typing 4s steps(40) forwards, blink 0.75s step-end infinite;
+  animation-delay: 10s; /* Starts after the second animation finishes */
+}
+
+.text-container .typing-animation:nth-child(4) {
+  animation: typing 4s steps(40) forwards, blink 0.75s step-end infinite;
+  animation-delay: 15s; /* Starts after the third animation finishes */
+}
+
+/* Typing animation keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
