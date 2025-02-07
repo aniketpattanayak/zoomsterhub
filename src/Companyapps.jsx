@@ -56,7 +56,7 @@ const Companyapps = () => {
       icon: "/Zoomaar.png",
       title: "Zoomaar",
       description:
-        "ZoomaaR is a dynamic e-commerce platform offering a wide range of clothing, ornaments, and more. It provides a seamless shopping experience with diverse product selections to meet the needs of a global audience.(Launching Soon...)",
+        "Zoomaar is a dynamic e-commerce platform offering a wide range of clothing, ornaments, and more. It provides a seamless shopping experience with diverse product selections to meet the needs of a global audience.(Launching Soon...)",
       buttonText: "Website",
       link: "https://www.zoomaar.com",
     },
