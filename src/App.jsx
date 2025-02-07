@@ -104,15 +104,15 @@ const App = () => {
                 }
               />
               <Route path="/company-umbrella" element={<CompanyUmberalla />} />
-              <Route exact path="/services" element={<ServicesSlider />} />
-              <Route exact path="/team" element={<Team />} />
+              <Route exact path="/ourservices" element={<ServicesSlider />} />
+              <Route exact path="/ourteam" element={<Team />} />
               <Route exact path="/about-director" element={<AboutDirector />} />
               <Route exact path="/contact-us" element={<ContactForm />} />
               <Route exact path="/aboutdirector" element={<AboutDirectorE />} />
               <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
               <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route exact path="/cookies" element={<CookiesPolicy />} />
-              <Route exact path="/clientele" element={<Clientele />} />
+              <Route exact path="/ourcollaborations" element={<Clientele />} />
               <Route exact path="/AppDevelopment" element={<AppDevelopment />} />
               <Route exact path="/EventManagement" element={<EventManagement />} />
               <Route exact path="/WebDesigning" element={<WebDesigning />} />

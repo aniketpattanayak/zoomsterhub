@@ -59,9 +59,9 @@ const Header = () => {
             <CompanyUmberalla />
           </li>
           {[
-            { to: '/services', label: 'Our Services' },
-            { to: '/clientele', label: 'Our Collaborations' },
-            { to: '/team', label: 'Our Team' },
+            { to: '/ourservices', label: 'Our Services' },
+            { to: '/ourcollaborations', label: 'Our Collaborations' },
+            { to: '/ourteam', label: 'Our Team' },
             { to: '/aboutdirector', label: 'About Director' },
             { to: '/contact-us', label: 'Contact Us' },
           ].map((item, index) => (

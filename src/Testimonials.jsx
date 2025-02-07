@@ -89,7 +89,7 @@ const FeedbackList = () => {
       username: "Pragath",
       feedback:
         "We received our work on time,A dependable partner for cutting-edge IT solutions and support services.",
-      date: "December 2025",
+      date: "December 2024",
       number: 5,
     },
     {
@@ -107,7 +107,7 @@ const FeedbackList = () => {
       username: "UllasCR",
       feedback:
         "Expert team with exceptional service. Highly recommend for IT needs,Outstanding IT solutions, reliable support, and seamless integration every time.",
-      date: "November 2009",
+      date: "November 2024",
       number: 5,
     },
   ];
