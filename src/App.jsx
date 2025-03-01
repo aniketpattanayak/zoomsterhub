@@ -104,7 +104,7 @@ const App = () => {
                 }
               />
               <Route path="/company-umbrella" element={<CompanyUmberalla />} />
-              <Route exact path="/ourservices" element={<ServicesSlider />} />
+              <Route path="/ourservices" element={<ServicesSlider />} />
               <Route exact path="/ourteam" element={<Team />} />
               <Route exact path="/about-director" element={<AboutDirector />} />
               <Route exact path="/contact-us" element={<ContactForm />} />
